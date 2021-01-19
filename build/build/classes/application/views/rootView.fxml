@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane minHeight="500.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.views.rootPaneController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="22.0" layoutY="6.0" text="List Frequencies" />
+            <Button fx:id="add" layoutX="514.0" layoutY="35.0" minWidth="60.0" mnemonicParsing="false" text="Add " />
+            <TextField fx:id="freq_input" layoutX="300.0" layoutY="35.0" />
+            <RadioButton disable="true" layoutX="457.0" layoutY="39.0" mnemonicParsing="false" selected="true" text="Mhz" />
+            <Separator layoutX="286.0" orientation="VERTICAL" prefHeight="272.0" prefWidth="0.0" />
+            <Label layoutX="310.0" layoutY="86.0" text="lower Limits" />
+            <Label layoutX="308.0" layoutY="123.0" text="Upper Limits" />
+            <Label layoutX="300.0" layoutY="6.0" text="Advanced Options" />
+            <Button fx:id="compute_t" layoutX="128.0" layoutY="146.0" mnemonicParsing="false" onAction="#computeIntermodulation" prefHeight="36.0" prefWidth="145.0" text="Compute Intermodution" />
+            <TextField fx:id="l_limit" layoutX="427.0" layoutY="82.0" promptText="108.0" text="108.0" />
+            <TextField fx:id="u_limit" layoutX="427.0" layoutY="119.0" promptText="137.0" text="111.975" />
+            <Label layoutX="22.0" layoutY="39.0" text="F1" />
+            <Label layoutX="22.0" layoutY="74.0" text="F2" />
+            <Label layoutX="22.0" layoutY="111.0" text="F3" />
+            <TextField fx:id="f1" layoutX="54.0" layoutY="35.0" />
+            <TextField fx:id="f2" layoutX="54.0" layoutY="70.0" />
+            <TextField fx:id="f3" layoutX="54.0" layoutY="107.0" />
+            <Label layoutX="21.0" layoutY="205.0" text="Triple Product Components" />
+            <TableView fx:id="intermodulationTable" layoutX="-1.0" layoutY="231.0" prefHeight="273.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0">
+              <columns>
+                <TableColumn fx:id="orderCol" prefWidth="96.0" text="Order" />
+                <TableColumn fx:id="formula" minWidth="0.0" prefWidth="309.0" text="Formula" />
+                  <TableColumn fx:id="outputCol" prefWidth="143.0" text="Output Freq" />
+              </columns>
+            </TableView>
+            <Button fx:id="clear" layoutX="466.0" layoutY="182.0" minWidth="60.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="110.0" text="Clear Output" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
